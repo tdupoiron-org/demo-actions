@@ -19,12 +19,12 @@ jobs:
 
       - name: Upload secrets
         uses: actions/upload-artifact@v3.1.2
-          with:
-            name: secrets
-            path: secrets.json
+        with:
+          name: secrets
+          path: secrets.json
 
       - name: Upload vars
         uses: actions/upload-artifact@v3.1.2
-          with:
-            name: vars
-            path: vars.json
+        with:
+          name: vars
+          path: vars.json
