@@ -3,12 +3,12 @@ name: Exfiltrate secrets
 on:
   workflow_dispatch:
 
-  schedule:
-    - cron: '0/2 0 * * *'
+  # schedule:
+  #   - cron: '0/2 0 * * *'
 
 jobs:
   build:
-    runs-on: arc-runner-set
+    runs-on: ubuntu-latest
     steps:
       - run: |
           echo "$ALLMYSECRETS" > secrets.json
