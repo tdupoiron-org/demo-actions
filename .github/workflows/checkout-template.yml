@@ -1,0 +1,16 @@
+name: Checkout template
+
+on:
+  workflow_dispatch:
+
+jobs:
+  template:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        with:
+          repository: tdupoiron-org/demo-repo-template
+
+      - run: find
