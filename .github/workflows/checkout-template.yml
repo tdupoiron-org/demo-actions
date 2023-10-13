@@ -13,5 +13,6 @@ jobs:
         with:
           repository: tdupoiron-org/demo-repo-template
           ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - run: find
