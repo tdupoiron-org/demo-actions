@@ -19,4 +19,5 @@ jobs:
     steps:
     
       - name: Run a one-line script
-        run: 
+        # use input in console
+        run: echo ${{ github.event.inputs.message }}
