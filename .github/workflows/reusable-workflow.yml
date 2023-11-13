@@ -1,0 +1,22 @@
+name: Reusable Workflow
+
+# Controls when the workflow will run
+on:
+  workflow_call:
+    inputs:
+      message:
+        type: string
+        required: true
+  workflow_dispatch:
+    inputs:
+      message:
+        type: text
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Run a one-line script
+        run: 
