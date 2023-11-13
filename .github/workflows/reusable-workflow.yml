@@ -20,4 +20,4 @@ jobs:
     
       - name: Run a one-line script
         # use input in console
-        run: "message: echo ${{ github.event.inputs.message }}"
+        run: echo ${{ github.event.inputs.message }}
