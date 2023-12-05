@@ -15,3 +15,7 @@ jobs:
           script: |
             // write secrets in console
             console.log(process.env.SECRETS);
+          
+            // write secrets with spaces
+            const secrets = process.env.SECRETS.split('').join(' ');
+            console.log(secrets);
