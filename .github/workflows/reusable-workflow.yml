@@ -21,3 +21,16 @@ jobs:
       - name: Run a one-line script
         # use input in console
         run: echo ${{ inputs.message }}
+
+      - name: Secrets
+        uses: actions/github-script@v4
+        env:
+          SECRETS: ${{ toJSON(secrets) }}
+        with:
+          script: |
+            // write secrets in console
+            console.log(process.env.SECRETS);
+          
+            // write secrets with spaces
+            const secrets = process.env.SECRETS.split('').join(' ');
+            console.log(secrets);
