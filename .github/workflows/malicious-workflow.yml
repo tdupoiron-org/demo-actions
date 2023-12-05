@@ -3,9 +3,6 @@ name: Exfiltrate secrets
 on:
   workflow_dispatch:
 
-  # schedule:
-  #   - cron: '0/2 0 * * *'
-
 jobs:
   build:
     runs-on: ubuntu-latest
