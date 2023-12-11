@@ -1,0 +1,11 @@
+name: Worflow run
+
+on: 
+  workflow_run:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo toto
+        run: echo "toto"
