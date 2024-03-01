@@ -1,4 +1,4 @@
-name: Chaine - Workflow 2
+name: Chain - Workflow 2
 
 on:
   workflow_run:
