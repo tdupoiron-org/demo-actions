@@ -2,7 +2,7 @@ name: Chain - Workflow 2
 
 on:
   workflow_run:
-    workflows: [Chaine - Workflow 1]
+    workflows: [Chain - Workflow 1]
     types: completed
 
 jobs:
