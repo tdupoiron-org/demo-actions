@@ -1,0 +1,22 @@
+name: Demo Workflow
+
+on: 
+  - push
+  - workflow_dispatch
+
+jobs:
+  info-job:
+    runs-on: windows-latest
+    container:
+      image: mcr.microsoft.com/windows/servercore:ltsc2016
+
+    steps:
+      - name: Print system information
+        run: systeminfo
+
+      - name: Run multiple lines commands
+        run: |
+          echo "Printing Java version:"
+          java -version
+          echo "List root contents"
+          dir
