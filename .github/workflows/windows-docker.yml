@@ -1,4 +1,4 @@
-name: Demo Workflow
+name: Windows docker container
 
 on: 
   - push
