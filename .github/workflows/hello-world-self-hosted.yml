@@ -1,4 +1,4 @@
-name: Hello World
+name: Hello World Self Hosted
 
 on:
   pull_request:
