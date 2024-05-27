@@ -1,7 +1,6 @@
-name: Windows docker container
+name: Windows docker container runner
 
 on: 
-  - push
   - workflow_dispatch
 
 jobs:
