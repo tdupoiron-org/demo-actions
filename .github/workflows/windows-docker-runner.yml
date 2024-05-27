@@ -1,0 +1,20 @@
+name: Windows docker container
+
+on: 
+  - push
+  - workflow_dispatch
+
+jobs:
+  info-job:
+    runs-on: tdupoiron-runner-windows-atos
+
+    steps:
+      - name: Print system information
+        run: systeminfo
+
+      - name: Run multiple lines commands
+        run: |
+          echo "Printing Java version:"
+          java -version
+          echo "List root contents"
+          dir
