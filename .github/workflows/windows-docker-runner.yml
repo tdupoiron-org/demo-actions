@@ -13,7 +13,4 @@ jobs:
 
       - name: Run multiple lines commands
         run: |
-          echo "Printing Java version:"
-          java -version
-          echo "List root contents"
           dir
