@@ -1,0 +1,25 @@
+name: Hello World
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: hello-world-java-action 1
+        uses: sormuras/hello-world-java-action@v1
+        with: 
+          who-to-greet: "run 1"
+
+      - name: hello-world-java-action 2
+        uses: sormuras/hello-world-java-action@v1
+        with: 
+          who-to-greet: "run 1"
+
+      - name: hello-world-java-action 3
+        uses: sormuras/hello-world-java-action@v1
+        with: 
+          who-to-greet: "run 3"
