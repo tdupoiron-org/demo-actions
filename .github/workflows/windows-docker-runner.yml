@@ -5,7 +5,7 @@ on:
 
 jobs:
   info-job:
-    runs-on: tdupoiron-runner-windows-atos
+    runs-on: self-hosted
 
     steps:
       - name: Print system information
