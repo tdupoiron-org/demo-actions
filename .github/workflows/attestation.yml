@@ -37,6 +37,12 @@ jobs:
 
     steps:
 
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: artifact
+          path: downloaded-artifact
+
       - uses: actions/attest-build-provenance@v1
         with:
-          subject-path: 'artifact.txt'
+          subject-path: 'downloaded-artifact/artifact.txt'
