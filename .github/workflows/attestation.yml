@@ -4,6 +4,10 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  id-token: write
+  attestations: write
+
 jobs:
 
   artifact:
