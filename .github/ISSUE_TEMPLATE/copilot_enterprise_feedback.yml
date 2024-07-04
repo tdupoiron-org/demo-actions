@@ -19,12 +19,17 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: dropdown
     id: priority
     attributes:
       label: Priority
-      description: "Enter the priority of the feedback"
-      placeholder: "High, Medium, Low"
+      description: "Select the priority of the feedback"
+      options:
+        - Minor
+        - Medium
+        - Major
+        - Blocker
+        - Bug
     validations:
       required: true
 
