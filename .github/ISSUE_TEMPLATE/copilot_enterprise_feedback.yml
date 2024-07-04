@@ -25,11 +25,12 @@ body:
       label: Priority
       description: "Select the priority of the feedback"
       options:
-        - Minor
-        - Medium
-        - Major
-        - Blocker
-        - Bug
+        - 😊 Positive
+        - 🙂 Minor
+        - 😐 Medium
+        - 😟 Major
+        - 🚫 Blocker
+        - 🐞 Bug
     validations:
       required: true
 
