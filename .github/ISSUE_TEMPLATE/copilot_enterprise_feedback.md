@@ -1,44 +1,3 @@
-# Hello world javascript action
-
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
-
-## Inputs
-
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
-
-## Example usage
-
-```yaml
-uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
-with:
-  who-to-greet: 'Mona the Octocat'
-```
-
-test
-
-## Copilot Enterprise Feedback Issue Template
-
-This template is used to report feedback for Copilot Enterprise. It includes the following inputs:
-
-- Date
-- Priority
-- Objective/Use Case
-- Metadata (language, taille du repo, …)
-- Interaction (chat, PR, KB, ..)
-- Result expected
-- Result obtained
-
-### Example usage
-
-```yaml
 name: Copilot Enterprise Feedback
 description: Report feedback for Copilot Enterprise
 title: "[Feedback] "
@@ -113,4 +72,3 @@ body:
       placeholder: "Enter the obtained result"
     validations:
       required: true
-```
