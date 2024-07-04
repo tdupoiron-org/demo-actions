@@ -29,7 +29,7 @@ test
 This template is used to report feedback for Copilot Enterprise. It includes the following inputs:
 
 - Date
-- Priority (dropdown list: Minor, Medium, Major, Blocker, Bug)
+- Priority (dropdown list: 😊 Positive, 🙂 Minor, 😐 Medium, 😟 Major, 🚫 Blocker, 🐞 Bug)
 - Objective/Use Case
 - Metadata (language, taille du repo, …)
 - Interaction (chat, PR, KB, ..)
@@ -66,11 +66,12 @@ body:
       label: Priority
       description: "Select the priority of the feedback"
       options:
-        - Minor
-        - Medium
-        - Major
-        - Blocker
-        - Bug
+        - 😊 Positive
+        - 🙂 Minor
+        - 😐 Medium
+        - 😟 Major
+        - 🚫 Blocker
+        - 🐞 Bug
     validations:
       required: true
 
