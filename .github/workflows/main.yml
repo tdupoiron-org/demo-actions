@@ -1,0 +1,12 @@
+name: Hello World Workflow
+
+on: [push, workflow_dispatch]
+
+jobs:
+  java:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Java
+      run: java -version
