@@ -4,6 +4,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  workflow: write
+
 jobs:
   build:
     runs-on: 
