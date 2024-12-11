@@ -4,14 +4,9 @@ on:
   pull_request:
   workflow_dispatch:
 
-permissions:
-  workflow: write
-
 jobs:
   build:
-    runs-on: 
-      group: capgemini
-      labels: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: hello-world
