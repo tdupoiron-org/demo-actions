@@ -11,3 +11,8 @@ jobs:
     steps:
       - name: hello-world
         run: echo "hello world"
+      - name: Set output example
+        id: step1
+        run: echo "::set-output name=myOutput::Hello, World!"
+      - name: Display output
+        run: echo "The output is ${{ steps.step1.outputs.myOutput }}"
