@@ -1,0 +1,8 @@
+name: AWS CodeBuild Runners
+on: [push]
+jobs:
+  Hello-World-Job:
+    runs-on:
+      - codebuild-tdupoiron-github-actions-runners-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: echo "Hello World"
